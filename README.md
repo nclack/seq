@@ -51,11 +51,6 @@ After installing CMake, and making sure it's on your path.  The first steps look
   cd build
   cmake ..
 ```
-Note that configuring as a Release build results in much faster (~10X) code than a Debug build.
-To make sure you have a release build use:
-```
-  cmake -DCMAKE_BUILD_TYPE=Release ..
-```
 
 ### Build
 
