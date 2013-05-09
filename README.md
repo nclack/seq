@@ -37,10 +37,6 @@ Requires [CMake](http://www.cmake.org/).
 
 You also need a C++ compiler and, optionally, Matlab.
 
-Building may require an internet connection.  The build process may
-attempt to download [Eigen](http://eigen.tuxfamily.org/), which is
-the linear algebra library used under the hood.
-
 After installing CMake, and making sure it's on your path.  The first steps look the same for most operating systems.  Open a terminal, change directory to where you cloned this repository, and then type:
 
 ### Configure
