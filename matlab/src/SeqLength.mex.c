@@ -9,12 +9,11 @@
 /// n=mexSeqLength(filename)
 /// Returns the number of frames
 void mexFunction(int nlhs,mxArray *plhs[],int nrhs,const mxArray *prhs[])
-{ TRY(nlhs==1 && 1<=nrhs);
-  char *filename=0;
+{ char *filename=0;
   SeqReader *ctx=0;
   mwSize dims[]={1,1};
   SET_REPORTERS;
-
+  TRY(nlhs==1 && 1<=nrhs);
   TRY(filename=(char*)mxArrayToString(prhs[0]));
   TRY(ctx=Seq_Open(filename));
   TRY(plhs[0]=mxCreateNumericArray(1,dims,mxUINT32_CLASS,mxREAL));

@@ -9,12 +9,12 @@
 /// im=mexSeqRead(filename,idx)
 /// Caller must enforce input types are correct.
 void mexFunction(int nlhs,mxArray *plhs[],int nrhs,const mxArray *prhs[])
-{ TRY(nlhs==1 && nrhs==2);
+{ 
   char *filename=0;
   SeqReader *ctx=0;
   int32_t i;
   SET_REPORTERS;
-
+  TRY(nlhs==1 && nrhs==2);
   TRY(filename=(char*)mxArrayToString(prhs[0]));
   i=*(int32_t*)mxGetData(prhs[1]);
   i-=1; // Assume input is in Matlab's 1 based indexing.  Convert to 0 based indexing.
